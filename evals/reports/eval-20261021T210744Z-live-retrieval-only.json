@@ -1,0 +1,1465 @@
+{
+  "generated_at": "2026-10-21T21:07:44+00:00",
+  "mode": "live-retrieval-only",
+  "config": {
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dim": 768,
+    "generation_model": "gemini-3.8-flash",
+    "thinking_level": "low",
+    "min_similarity": 0.55,
+    "term_guard": true,
+    "top_k": 5,
+    "candidates": 20,
+    "rrf_k": 60,
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "judge_model": null,
+    "ablation": false,
+    "pricing_verified_on": "2026-10-21"
+  },
+  "corpus": {
+    "path": "tests/fixtures/corpus",
+    "chunks_in_db_for_model": 24
+  },
+  "questions_file": "evals/questions.yaml",
+  "summary": {
+    "questions": 32,
+    "scored": 32,
+    "errored": 0,
+    "answerable": 22,
+    "unanswerable": 10,
+    "generated": false,
+    "recall_hybrid": {
+      "1": 0.7955,
+      "3": 0.8409,
+      "5": 0.8864
+    },
+    "recall_vector": {
+      "1": 0.75,
+      "3": 0.8864,
+      "5": 0.8864
+    },
+    "recall_fts": {
+      "1": 0.7955,
+      "3": 0.8409,
+      "5": 0.8864
+    },
+    "false_refusal_rate": 0.0,
+    "refusal_accuracy": 0.5,
+    "answer_correctness": null,
+    "key_fact_recall": null,
+    "overall_answer_or_refuse_accuracy": null,
+    "citation_validity": null,
+    "citation_gold_source": null,
+    "unanswerable_outcomes": {
+      "unsupported_terms": 3,
+      "answered": 5,
+      "low_similarity": 2
+    },
+    "correctness_by_type": {},
+    "judge_faithfulness": null,
+    "judge_n": 0,
+    "model_only_refusal_accuracy": null,
+    "latency_ms_total": {
+      "p50": 161.1,
+      "max": 182.3
+    },
+    "top_similarity": {
+      "answerable_min": 0.5697,
+      "answerable_median": 0.7095,
+      "unanswerable_max": 0.7991,
+      "unanswerable_median": 0.718
+    }
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.3,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.0
+    },
+    {
+      "threshold": 0.35,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.0
+    },
+    {
+      "threshold": 0.4,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.0
+    },
+    {
+      "threshold": 0.45,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.0
+    },
+    {
+      "threshold": 0.5,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.1
+    },
+    {
+      "threshold": 0.55,
+      "answerable_passing": 1.0,
+      "unanswerable_blocked": 0.2
+    },
+    {
+      "threshold": 0.6,
+      "answerable_passing": 0.9545,
+      "unanswerable_blocked": 0.2
+    },
+    {
+      "threshold": 0.65,
+      "answerable_passing": 0.7273,
+      "unanswerable_blocked": 0.3
+    },
+    {
+      "threshold": 0.7,
+      "answerable_passing": 0.5909,
+      "unanswerable_blocked": 0.4
+    },
+    {
+      "threshold": 0.75,
+      "answerable_passing": 0.3182,
+      "unanswerable_blocked": 0.8
+    },
+    {
+      "threshold": 0.8,
+      "answerable_passing": 0.0,
+      "unanswerable_blocked": 1.0
+    },
+    {
+      "threshold": 0.85,
+      "answerable_passing": 0.0,
+      "unanswerable_blocked": 1.0
+    },
+    {
+      "threshold": 0.9,
+      "answerable_passing": 0.0,
+      "unanswerable_blocked": 1.0
+    }
+  ],
+  "est_cost_usd": {
+    "questions_and_judge": 9e-06,
+    "ingest_embedding_estimate": null
+  },
+  "items": [
+    {
+      "id": "q01",
+      "type": "lookup",
+      "question": "What are the 2P reserves of Kestrel Field?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7295,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_operations_notes.md"
+      ],
+      "latency_ms": {
+        "embed_query": 159.7,
+        "retrieval": 7.6,
+        "generation": 0.0,
+        "total": 169.0
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q02",
+      "type": "lookup",
+      "question": "What are the proved (1P) reserves of Kestrel Field?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7679,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_operations_notes.md"
+      ],
+      "latency_ms": {
+        "embed_query": 149.6,
+        "retrieval": 10.9,
+        "generation": 0.0,
+        "total": 163.1
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q03",
+      "type": "lookup",
+      "question": "What recovery factor is booked for Kestrel Field?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7495,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_operations_notes.md",
+        "kestrel_production_2026.csv row 1"
+      ],
+      "latency_ms": {
+        "embed_query": 155.5,
+        "retrieval": 13.0,
+        "generation": 0.0,
+        "total": 171.7
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q04",
+      "type": "lookup",
+      "question": "How much original oil in place is estimated for Kestrel Field?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7539,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_operations_notes.md"
+      ],
+      "latency_ms": {
+        "embed_query": 121.7,
+        "retrieval": 11.5,
+        "generation": 0.0,
+        "total": 135.8
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q05",
+      "type": "lookup",
+      "question": "How much does the three-well infill program cost?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7093,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 5"
+      ],
+      "latency_ms": {
+        "embed_query": 138.7,
+        "retrieval": 10.3,
+        "generation": 0.0,
+        "total": 152.4
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q06",
+      "type": "lookup",
+      "question": "Under what condition does management recommend a waterflood pilot?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7097,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_operations_notes.md",
+        "kestrel_well_tests.csv row 2",
+        "kestrel_hse_procedures.md section 2"
+      ],
+      "latency_ms": {
+        "embed_query": 166.0,
+        "retrieval": 10.5,
+        "generation": 0.0,
+        "total": 179.2
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q07",
+      "type": "lookup",
+      "question": "What was the flaring total in March 2026?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7187,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_production_2026.csv row 7",
+        "kestrel_production_2026.csv row 9",
+        "kestrel_production_2026.csv row 6",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 5"
+      ],
+      "latency_ms": {
+        "embed_query": 122.9,
+        "retrieval": 6.1,
+        "generation": 0.0,
+        "total": 130.8
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      },
+      "recall_vector": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q08",
+      "type": "lookup",
+      "question": "What is the next planned workover?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6828,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_operations_notes.md",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_production_2026.csv row 7",
+        "kestrel_production_2026.csv row 1"
+      ],
+      "latency_ms": {
+        "embed_query": 160.9,
+        "retrieval": 7.5,
+        "generation": 0.0,
+        "total": 171.8
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q09",
+      "type": "lookup",
+      "question": "What was Kestrel-4 oil production in February 2026?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7831,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_production_2026.csv row 6",
+        "kestrel_production_2026.csv row 3",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 4"
+      ],
+      "latency_ms": {
+        "embed_query": 151.5,
+        "retrieval": 8.6,
+        "generation": 0.0,
+        "total": 162.4
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      }
+    },
+    {
+      "id": "q10",
+      "type": "lookup",
+      "question": "What was the uptime of Kestrel-3 in January 2026?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7679,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_production_2026.csv row 2",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 3"
+      ],
+      "latency_ms": {
+        "embed_query": 148.0,
+        "retrieval": 10.0,
+        "generation": 0.0,
+        "total": 160.6
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q11",
+      "type": "lookup",
+      "question": "What water cut did Kestrel-4 show in its March 2026 well test?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7891,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_well_tests.csv row 4",
+        "kestrel_well_tests.csv row 3",
+        "kestrel_well_tests.csv row 2",
+        "kestrel_well_tests.csv row 1",
+        "kestrel_well_tests.csv row 6"
+      ],
+      "latency_ms": {
+        "embed_query": 147.5,
+        "retrieval": 10.9,
+        "generation": 0.0,
+        "total": 161.3
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      }
+    },
+    {
+      "id": "q12",
+      "type": "lookup",
+      "question": "How long is a hot work permit valid?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6175,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_operations_notes.md",
+        "kestrel_reserves_memo.pdf p.2"
+      ],
+      "latency_ms": {
+        "embed_query": 161.4,
+        "retrieval": 11.1,
+        "generation": 0.0,
+        "total": 174.4
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q13",
+      "type": "lookup",
+      "question": "Where is the muster point?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6349,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_facilities_study.pdf p.1",
+        "tallgrass_company_overview.txt",
+        "kestrel_operations_notes.md"
+      ],
+      "latency_ms": {
+        "embed_query": 162.9,
+        "retrieval": 8.5,
+        "generation": 0.0,
+        "total": 174.3
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q14",
+      "type": "lookup",
+      "question": "What is the compressor rated for?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7064,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_facilities_study.pdf p.2",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_well_tests.csv row 4",
+        "kestrel_production_2026.csv row 2"
+      ],
+      "latency_ms": {
+        "embed_query": 147.9,
+        "retrieval": 6.9,
+        "generation": 0.0,
+        "total": 157.2
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q15",
+      "type": "lookup",
+      "question": "What is the permitted maximum injection rate for Kestrel-D1?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6819,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_well_tests.csv row 2",
+        "kestrel_reserves_memo.pdf p.2"
+      ],
+      "latency_ms": {
+        "embed_query": 136.0,
+        "retrieval": 8.4,
+        "generation": 0.0,
+        "total": 147.4
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q16",
+      "type": "lookup",
+      "question": "Who is the Chief Financial Officer of Tallgrass Fictional Energy?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7636,
+      "answer": "[not generated]",
+      "retrieved": [
+        "tallgrass_company_overview.txt",
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_operations_notes.md",
+        "kestrel_facilities_study.pdf p.2"
+      ],
+      "latency_ms": {
+        "embed_query": 142.1,
+        "retrieval": 9.9,
+        "generation": 0.0,
+        "total": 154.9
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q17",
+      "type": "paraphrase",
+      "question": "Which wells use rod pumps rather than electric submersible pumps?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.5697,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 3",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 7"
+      ],
+      "latency_ms": {
+        "embed_query": 169.9,
+        "retrieval": 8.6,
+        "generation": 0.0,
+        "total": 180.6
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      },
+      "recall_vector": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q18",
+      "type": "paraphrase",
+      "question": "How quickly must a spill bigger than a barrel be reported to the regulator?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6497,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_well_tests.csv row 6"
+      ],
+      "latency_ms": {
+        "embed_query": 170.0,
+        "retrieval": 9.4,
+        "generation": 0.0,
+        "total": 182.3
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q19",
+      "type": "paraphrase",
+      "question": "On which days does the oil get collected by truck?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6263,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 4",
+        "kestrel_operations_notes.md"
+      ],
+      "latency_ms": {
+        "embed_query": 157.5,
+        "retrieval": 10.0,
+        "generation": 0.0,
+        "total": 169.3
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q20",
+      "type": "paraphrase",
+      "question": "How many people does the company employ?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6297,
+      "answer": "[not generated]",
+      "retrieved": [
+        "tallgrass_company_overview.txt",
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_facilities_study.pdf p.1"
+      ],
+      "latency_ms": {
+        "embed_query": 155.3,
+        "retrieval": 8.3,
+        "generation": 0.0,
+        "total": 167.0
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q21",
+      "type": "multi-evidence",
+      "question": "Why did Kestrel-4 output drop in February 2026, and how many barrels of oil did it make that month?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7644,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_production_2026.csv row 6",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 3",
+        "kestrel_production_2026.csv row 1"
+      ],
+      "latency_ms": {
+        "embed_query": 144.0,
+        "retrieval": 12.5,
+        "generation": 0.0,
+        "total": 159.4
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+      },
+      "recall_vector": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+      },
+      "recall_fts": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+      }
+    },
+    {
+      "id": "q22",
+      "type": "multi-evidence",
+      "question": "How does the disposal well's average injection rate compare to its permitted maximum?",
+      "answerable": true,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6754,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_well_tests.csv row 1"
+      ],
+      "latency_ms": {
+        "embed_query": 138.7,
+        "retrieval": 15.2,
+        "generation": 0.0,
+        "total": 156.8
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      },
+      "recall_hybrid": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_vector": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "recall_fts": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      }
+    },
+    {
+      "id": "q23",
+      "type": "near-miss",
+      "question": "What was the uptime of Kestrel-4 in June 2026?",
+      "answerable": false,
+      "answered": false,
+      "refusal_reason": "unsupported_terms",
+      "unsupported_terms": [
+        "june"
+      ],
+      "top_similarity": 0.7488,
+      "answer": "The corpus does not cover this question, so I can't answer it from the documents provided.",
+      "retrieved": [
+        "kestrel_production_2026.csv row 3",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 6",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 2"
+      ],
+      "latency_ms": {
+        "embed_query": 141.0,
+        "retrieval": 14.7,
+        "generation": 0.0,
+        "total": 158.1
+      },
+      "est_cost_usd": 1.65e-06,
+      "citations": {
+        "cited": [],
+        "all_in_retrieved": null
+      }
+    },
+    {
+      "id": "q24",
+      "type": "near-miss",
+      "question": "Who is the Chief Executive Officer of Tallgrass Fictional Energy?",
+      "answerable": false,
+      "answered": false,
+      "refusal_reason": "unsupported_terms",
+      "unsupported_terms": [
+        "executive"
+      ],
+      "top_similarity": 0.7497,
+      "answer": "The corpus does not cover this question, so I can't answer it from the documents provided.",
+      "retrieved": [
+        "tallgrass_company_overview.txt",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_operations_notes.md",
+        "kestrel_facilities_study.pdf p.2"
+      ],
+      "latency_ms": {
+        "embed_query": 135.2,
+        "retrieval": 10.0,
+        "generation": 0.0,
+        "total": 148.5
+      },
+      "est_cost_usd": 2.4e-06,
+      "citations": {
+        "cited": [],
+        "all_in_retrieved": null
+      }
+    },
+    {
+      "id": "q25",
+      "type": "near-miss",
+      "question": "What oil price assumption underlies the 2P reserves figure?",
+      "answerable": false,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6615,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.1",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 4",
+        "tallgrass_company_overview.txt",
+        "kestrel_facilities_study.pdf p.1"
+      ],
+      "latency_ms": {
+        "embed_query": 133.3,
+        "retrieval": 7.7,
+        "generation": 0.0,
+        "total": 144.0
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      }
+    },
+    {
+      "id": "q26",
+      "type": "near-miss",
+      "question": "When will the Kestrel-7 infill well start producing?",
+      "answerable": false,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7316,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 2",
+        "kestrel_production_2026.csv row 7",
+        "kestrel_production_2026.csv row 5"
+      ],
+      "latency_ms": {
+        "embed_query": 150.2,
+        "retrieval": 14.7,
+        "generation": 0.0,
+        "total": 171.3
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      }
+    },
+    {
+      "id": "q27",
+      "type": "near-miss",
+      "question": "What was the gas production of Kestrel-5 in February 2026?",
+      "answerable": false,
+      "answered": false,
+      "refusal_reason": "unsupported_terms",
+      "unsupported_terms": [
+        "kestrel-5"
+      ],
+      "top_similarity": 0.7991,
+      "answer": "The corpus does not cover this question, so I can't answer it from the documents provided.",
+      "retrieved": [
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_production_2026.csv row 1",
+        "kestrel_production_2026.csv row 7",
+        "kestrel_production_2026.csv row 6"
+      ],
+      "latency_ms": {
+        "embed_query": 149.7,
+        "retrieval": 12.3,
+        "generation": 0.0,
+        "total": 165.0
+      },
+      "est_cost_usd": 2.1e-06,
+      "citations": {
+        "cited": [],
+        "all_in_retrieved": null
+      }
+    },
+    {
+      "id": "q28",
+      "type": "near-miss",
+      "question": "What is the capital cost of the waterflood pilot?",
+      "answerable": false,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7043,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_reserves_memo.pdf p.2",
+        "kestrel_facilities_study.pdf p.3",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_well_tests.csv row 4",
+        "kestrel_production_2026.csv row 1"
+      ],
+      "latency_ms": {
+        "embed_query": 110.6,
+        "retrieval": 9.7,
+        "generation": 0.0,
+        "total": 123.1
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      }
+    },
+    {
+      "id": "q29",
+      "type": "near-miss",
+      "question": "What H2S concentration was measured in the Kestrel gas stream?",
+      "answerable": false,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.7581,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_operations_notes.md",
+        "kestrel_production_2026.csv row 7",
+        "kestrel_production_2026.csv row 4"
+      ],
+      "latency_ms": {
+        "embed_query": 148.2,
+        "retrieval": 9.5,
+        "generation": 0.0,
+        "total": 160.8
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      }
+    },
+    {
+      "id": "q30",
+      "type": "near-miss",
+      "question": "How many people work at the central tank battery?",
+      "answerable": false,
+      "answered": true,
+      "refusal_reason": null,
+      "unsupported_terms": [],
+      "top_similarity": 0.6241,
+      "answer": "[not generated]",
+      "retrieved": [
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_hse_procedures.md section 2",
+        "tallgrass_company_overview.txt",
+        "kestrel_operations_notes.md",
+        "kestrel_hse_procedures.md section 1"
+      ],
+      "latency_ms": {
+        "embed_query": 147.3,
+        "retrieval": 11.5,
+        "generation": 0.0,
+        "total": 161.7
+      },
+      "est_cost_usd": null,
+      "citations": {
+        "cited": [
+          "not generated"
+        ],
+        "all_in_retrieved": false
+      }
+    },
+    {
+      "id": "q31",
+      "type": "off-topic",
+      "question": "Who won the 1998 football World Cup final?",
+      "answerable": false,
+      "answered": false,
+      "refusal_reason": "low_similarity",
+      "unsupported_terms": [],
+      "top_similarity": 0.471,
+      "answer": "The corpus does not cover this question, so I can't answer it from the documents provided.",
+      "retrieved": [
+        "kestrel_production_2026.csv row 4",
+        "kestrel_production_2026.csv row 5",
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_production_2026.csv row 6",
+        "kestrel_production_2026.csv row 2"
+      ],
+      "latency_ms": {
+        "embed_query": 132.1,
+        "retrieval": 11.1,
+        "generation": 0.0,
+        "total": 146.2
+      },
+      "est_cost_usd": 1.5e-06,
+      "citations": {
+        "cited": [],
+        "all_in_retrieved": null
+      }
+    },
+    {
+      "id": "q32",
+      "type": "off-topic",
+      "question": "What is the boiling point of ethanol at sea level?",
+      "answerable": false,
+      "answered": false,
+      "refusal_reason": "low_similarity",
+      "unsupported_terms": [],
+      "top_similarity": 0.5475,
+      "answer": "The corpus does not cover this question, so I can't answer it from the documents provided.",
+      "retrieved": [
+        "kestrel_hse_procedures.md section 1",
+        "kestrel_hse_procedures.md section 2",
+        "kestrel_facilities_study.pdf p.1",
+        "kestrel_well_tests.csv row 4",
+        "kestrel_well_tests.csv row 5"
+      ],
+      "latency_ms": {
+        "embed_query": 138.4,
+        "retrieval": 6.9,
+        "generation": 0.0,
+        "total": 147.9
+      },
+      "est_cost_usd": 1.8e-06,
+      "citations": {
+        "cited": [],
+        "all_in_retrieved": null
+      }
+    }
+  ]
+}

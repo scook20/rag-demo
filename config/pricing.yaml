@@ -1,0 +1,26 @@
+# Prices used to estimate per-request cost. Update when Google changes them.
+verified_on: 2026-10-21
+source: https://ai.google.dev/gemini-api/docs/pricing
+currency: USD
+unit: per_1m_tokens
+models:
+  gemini-3.8-flash:
+    input: 0.75
+    output: 3.75          # output price includes thinking tokens
+    note: "Introductory price through 2026-12-31; list price becomes 1.50 / 7.50 on 2027-01-01."
+  gemini-3.6-flash:
+    input: 0.75
+    output: 3.75
+    note: "Same prices as gemini-3.8-flash (pricing page, last updated 2026-10-19 UTC). Free tier is free of charge but rate limited."
+  gemini-embedding-001:
+    input: 0.15
+    estimate: true
+    note: "Not listed on the pricing page as of 2026-10-21. 0.15 is the embedding price quoted for File Search on that page; treat as an estimate."
+  gemini-embedding-2:
+    input: 0.20
+    note: "Listed text input price. Not wired up in v1 (see docs/decisions.md)."
+  fake-hash-embedding:
+    input: 0.0
+  fake-extractive:
+    input: 0.0
+    output: 0.0

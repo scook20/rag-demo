@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: pgvector/pgvector:0.8.7-pg18
+        env:
+          POSTGRES_USER: ragdemo
+          POSTGRES_PASSWORD: ragdemo
+          POSTGRES_DB: ragdemo
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U ragdemo -d ragdemo"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements-dev.txt && pip install -e .
+      # Offline unit tests plus integration tests against the pgvector service; no API key needed
+      - run: pytest -q -rs

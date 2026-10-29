@@ -1,0 +1,4 @@
+google-genai==2.32.0
+psycopg[binary]==3.3.6
+pypdf==6.21.2
+PyYAML==6.0.3

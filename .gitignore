@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Secrets: never commit env files, except the example
+.env*
+!.env.example
+
+# Corpus documents and request logs stay local
+data/raw/*
+!data/raw/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Offline (fake-model) eval reports are throwaway; live reports are committed on purpose
+evals/reports/*-offline.*
+
+# Eval checkpoints (rate-limited reruns)
+evals/reports/.checkpoint-*
+
+# Internal working notes stay local (backed up to Drive by local-only-backup.py)
+CLAUDE.md
+journal.md

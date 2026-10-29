@@ -1,0 +1,85 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 9 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 506 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 740 Td
+(FICTIONAL DEMO DOCUMENT - not real data) Tj T*
+(Kestrel Field Facilities Study \(Marrow Basin, fictional\)) Tj T*
+(Prepared by Tallgrass Fictional Energy, Facilities Engineering.) Tj T*
+() Tj T*
+(1. Central tank battery) Tj T*
+(The central tank battery has three 500 barrel oil tanks and two 400 barrel water tanks.) Tj T*
+(The inlet separator is rated for 15,000 barrels per day of total liquid.) Tj T*
+(Oil is sold by truck. Trucks collect on Tuesdays and Fridays.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 9 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 364 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 740 Td
+(FICTIONAL DEMO DOCUMENT - not real data) Tj T*
+(2. Gas compression) Tj T*
+(A single-stage reciprocating compressor was installed in 2019 and is rated for 2.4 MMscf per day.) Tj T*
+(The availability target for the compressor is 95 percent.) Tj T*
+(The compressor runs on grid power. A 250 kW diesel generator provides backup.) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 9 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 453 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+72 740 Td
+(FICTIONAL DEMO DOCUMENT - not real data) Tj T*
+(3. Produced water handling) Tj T*
+(Produced water is injected into the disposal well Kestrel-D1 at an average of 9,800 barrels per day.) Tj T*
+(The permitted maximum injection rate for Kestrel-D1 is 12,000 barrels per day.) Tj T*
+(The study recommends adding a second water filter skid in the fourth quarter of 2026,) Tj T*
+(at an estimated cost of 1.2 million USD.) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000000810 00000 n 
+0000000936 00000 n 
+0000001351 00000 n 
+0000001477 00000 n 
+0000001981 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+2051
+%%EOF

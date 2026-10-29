@@ -1,0 +1,8 @@
+# URL manifest for scripts/fetch_corpus.py. Add PUBLIC documents only (no client or confidential material).
+# The list is intentionally empty; nothing is downloaded until entries are added and the script is run.
+#
+# Entry format:
+#   - url: https://example.com/path/report.pdf
+#     filename: report.pdf        # optional; defaults to the last URL path segment
+#     sha256: <hex>               # optional; verified after download when present
+documents: []

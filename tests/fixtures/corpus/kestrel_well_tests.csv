@@ -1,0 +1,7 @@
+test_date,well,choke_64ths,tubing_pressure_psi,water_cut_pct,gor_scf_bbl
+2026-01-14,Kestrel-2,24,310,32,590
+2026-01-15,Kestrel-3,20,285,29,610
+2026-01-16,Kestrel-4,32,420,28,640
+2026-03-09,Kestrel-2,24,305,33,600
+2026-03-10,Kestrel-3,20,280,30,615
+2026-03-11,Kestrel-4,32,410,29,650

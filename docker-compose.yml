@@ -1,0 +1,22 @@
+# Local Postgres 18 + pgvector 0.8.7. Demo credentials only; bound to localhost.
+name: ragdemo
+services:
+  db:
+    image: pgvector/pgvector:0.8.7-pg18
+    container_name: ragdemo-pgvector
+    environment:
+      POSTGRES_USER: ragdemo
+      POSTGRES_PASSWORD: ragdemo
+      POSTGRES_DB: ragdemo
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - ragdemo-pgdata:/var/lib/postgresql   # Postgres 18 images keep data under a versioned subdir here
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ragdemo -d ragdemo"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  ragdemo-pgdata:

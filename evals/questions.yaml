@@ -1,0 +1,189 @@
+# Labeled question set over the FICTIONAL Kestrel corpus in tests/fixtures/corpus/.
+# Labels were written by the builder, who also wrote the corpus: see README caveats.
+# Format and scoring rules: src/ragdemo/evals.py.
+questions:
+  # ---- lookups: one fact in one chunk -------------------------------------------------------
+  - id: q01
+    type: lookup
+    question: "What are the 2P reserves of Kestrel Field?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 1, contains: "(2P) reserves"}]
+    key_facts: [["21.7"]]
+  - id: q02
+    type: lookup
+    question: "What are the proved (1P) reserves of Kestrel Field?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 1, contains: "(1P) reserves"}]
+    key_facts: [["14.2"]]
+  - id: q03
+    type: lookup
+    question: "What recovery factor is booked for Kestrel Field?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 1, contains: "recovery factor"}]
+    key_facts: [["28 percent", "28%"]]
+  - id: q04
+    type: lookup
+    question: "How much original oil in place is estimated for Kestrel Field?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 1, contains: "Original oil in place"}]
+    key_facts: [["77"]]
+  - id: q05
+    type: lookup
+    question: "How much does the three-well infill program cost?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 2, contains: "Capital cost"}]
+    key_facts: [["18.5"]]
+  - id: q06
+    type: lookup
+    question: "Under what condition does management recommend a waterflood pilot?"
+    answerable: true
+    evidence: [{source: kestrel_reserves_memo.pdf, page: 2, contains: "waterflood pilot"}]
+    key_facts: [["50 percent", "50%"]]
+  - id: q07
+    type: lookup
+    question: "What was the flaring total in March 2026?"
+    answerable: true
+    evidence: [{source: kestrel_operations_notes.md, contains: "4.2 MMscf"}]
+    key_facts: [["4.2"]]
+  - id: q08
+    type: lookup
+    question: "What is the next planned workover?"
+    answerable: true
+    evidence: [{source: kestrel_operations_notes.md, contains: "next planned workover"}]
+    key_facts: [["kestrel-2"], ["tubing"]]
+  - id: q09
+    type: lookup
+    question: "What was Kestrel-4 oil production in February 2026?"
+    answerable: true
+    evidence: [{source: kestrel_production_2026.csv, contains: "month: 2026-02; well: Kestrel-4"}]
+    key_facts: [["6100"]]
+  - id: q10
+    type: lookup
+    question: "What was the uptime of Kestrel-3 in January 2026?"
+    answerable: true
+    evidence: [{source: kestrel_production_2026.csv, contains: "month: 2026-01; well: Kestrel-3"}]
+    key_facts: [["98.1"]]
+  - id: q11
+    type: lookup
+    question: "What water cut did Kestrel-4 show in its March 2026 well test?"
+    answerable: true
+    evidence: [{source: kestrel_well_tests.csv, contains: "test_date: 2026-03-11; well: Kestrel-4"}]
+    key_facts: [["29"]]
+  - id: q12
+    type: lookup
+    question: "How long is a hot work permit valid?"
+    answerable: true
+    evidence: [{source: kestrel_hse_procedures.md, contains: "Hot work permits"}]
+    key_facts: [["12 hour", "12-hour", "12 hr"]]
+  - id: q13
+    type: lookup
+    question: "Where is the muster point?"
+    answerable: true
+    evidence: [{source: kestrel_hse_procedures.md, contains: "muster point"}]
+    key_facts: [["north gate"]]
+  - id: q14
+    type: lookup
+    question: "What is the compressor rated for?"
+    answerable: true
+    evidence: [{source: kestrel_facilities_study.pdf, page: 2, contains: "rated for 2.4"}]
+    key_facts: [["2.4"]]
+  - id: q15
+    type: lookup
+    question: "What is the permitted maximum injection rate for Kestrel-D1?"
+    answerable: true
+    evidence: [{source: kestrel_facilities_study.pdf, page: 3, contains: "permitted maximum"}]
+    key_facts: [["12000"]]
+  - id: q16
+    type: lookup
+    question: "Who is the Chief Financial Officer of Tallgrass Fictional Energy?"
+    answerable: true
+    evidence: [{source: tallgrass_company_overview.txt, contains: "Chief Financial Officer"}]
+    key_facts: [["priya anand"]]
+
+  # ---- paraphrases: little word overlap with the source sentence -----------------------------
+  - id: q17
+    type: paraphrase
+    question: "Which wells use rod pumps rather than electric submersible pumps?"
+    answerable: true
+    evidence: [{source: kestrel_operations_notes.md, contains: "rod pumps"}]
+    key_facts: [["kestrel-2"], ["kestrel-3"]]
+  - id: q18
+    type: paraphrase
+    question: "How quickly must a spill bigger than a barrel be reported to the regulator?"
+    answerable: true
+    evidence: [{source: kestrel_hse_procedures.md, contains: "regional regulator"}]
+    key_facts: [["24 hours", "24 hour"]]
+  - id: q19
+    type: paraphrase
+    question: "On which days does the oil get collected by truck?"
+    answerable: true
+    evidence: [{source: kestrel_facilities_study.pdf, page: 1, contains: "Trucks collect"}]
+    key_facts: [["tuesday"], ["friday"]]
+  - id: q20
+    type: paraphrase
+    question: "How many people does the company employ?"
+    answerable: true
+    evidence: [{source: tallgrass_company_overview.txt, contains: "employs 140"}]
+    key_facts: [["140"]]
+
+  # ---- multi-evidence: needs two chunks ------------------------------------------------------
+  - id: q21
+    type: multi-evidence
+    question: "Why did Kestrel-4 output drop in February 2026, and how many barrels of oil did it make that month?"
+    answerable: true
+    evidence:
+      - {source: kestrel_operations_notes.md, contains: "electric submersible pump (ESP) failure"}
+      - {source: kestrel_production_2026.csv, contains: "month: 2026-02; well: Kestrel-4"}
+    key_facts: [["esp", "pump"], ["6100"]]
+  - id: q22
+    type: multi-evidence
+    question: "How does the disposal well's average injection rate compare to its permitted maximum?"
+    answerable: true
+    evidence:
+      - {source: kestrel_facilities_study.pdf, page: 3, contains: "average of 9,800"}
+      - {source: kestrel_facilities_study.pdf, page: 3, contains: "permitted maximum"}
+    key_facts: [["9800"], ["12000"]]
+
+  # ---- near-miss: on topic, but the asked-for detail is not in the corpus --------------------
+  - id: q23
+    type: near-miss
+    question: "What was the uptime of Kestrel-4 in June 2026?"
+    answerable: false
+  - id: q24
+    type: near-miss
+    question: "Who is the Chief Executive Officer of Tallgrass Fictional Energy?"
+    answerable: false
+  - id: q25
+    type: near-miss
+    question: "What oil price assumption underlies the 2P reserves figure?"
+    answerable: false
+  - id: q26
+    type: near-miss
+    question: "When will the Kestrel-7 infill well start producing?"
+    answerable: false
+  - id: q27
+    type: near-miss
+    question: "What was the gas production of Kestrel-5 in February 2026?"
+    answerable: false
+  - id: q28
+    type: near-miss
+    question: "What is the capital cost of the waterflood pilot?"
+    answerable: false
+  - id: q29
+    type: near-miss
+    question: "What H2S concentration was measured in the Kestrel gas stream?"
+    answerable: false
+  - id: q30
+    type: near-miss
+    question: "How many people work at the central tank battery?"
+    answerable: false
+
+  # ---- off-topic: nothing in the corpus ----------------------------------------------------
+  - id: q31
+    type: off-topic
+    question: "Who won the 1998 football World Cup final?"
+    answerable: false
+  - id: q32
+    type: off-topic
+    question: "What is the boiling point of ethanol at sea level?"
+    answerable: false
